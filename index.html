@@ -5,17 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harmonic Path | Aarthi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleServices() {
+      const section = document.getElementById('services-section');
+      section.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
   <header class="bg-indigo-700 text-white p-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-3xl font-bold">Harmonic Path</h1>
-      <p class="text-lg mt-1">Product Strategy, Onboarding UX, and Signal-Led Design</p>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold">Harmonic Path</h1>
+        <p class="text-lg mt-1">Product Strategy, Onboarding UX, and Signal-Led Design</p>
+      </div>
+      <nav class="mt-4 md:mt-0 space-x-4">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#" onclick="toggleServices()" class="hover:underline">Services</a>
+        <a href="#case-studies" class="hover:underline">Case Studies</a>
+        <a href="#industries" class="hover:underline">Industries</a>
+        <a href="#connect" class="hover:underline">Connect</a>
+      </nav>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-6 py-10 space-y-12">
-    <section>
+    <section id="about">
       <h2 class="text-2xl font-semibold text-indigo-600">About Me</h2>
       <p class="mt-2 text-lg">
         I’m Aarthi — a Product & AI Strategist with a focus on onboarding UX, dynamic interfaces, and signal-first product design.
@@ -23,7 +38,21 @@
       </p>
     </section>
 
-    <section>
+    <section id="services-section" class="hidden">
+      <h2 class="text-2xl font-semibold text-indigo-600">Services Offered</h2>
+      <ul class="list-disc list-inside mt-2 text-lg space-y-2">
+        <li>Product strategy workshops (zero-to-one to scale)</li>
+        <li>Onboarding UX redesigns tailored to intent modeling</li>
+        <li>Signal bootstrapping + latent user mapping</li>
+        <li>Platform diagnostics for churn and engagement issues</li>
+      </ul>
+      <p class="mt-4 text-lg">
+        Ready to collaborate? <a href="mailto:your-email@example.com" class="text-blue-600 underline">Get in touch</a>
+        or connect on <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="text-blue-600 underline">LinkedIn</a>.
+      </p>
+    </section>
+
+    <section id="case-studies">
       <h2 class="text-2xl font-semibold text-indigo-600">Case Studies</h2>
       <ul class="list-disc list-inside space-y-2">
         <li>
@@ -32,21 +61,18 @@
           </a>
           — Redesigning first-touch flows for latent intent users
         </li>
-        <!-- Add more as needed -->
       </ul>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600">What I Bring</h2>
-      <ul class="list-disc list-inside space-y-1 text-lg">
-        <li>Product Vision and Zero-to-One Execution</li>
-        <li>Signal Bootstrapping and Intent Modeling</li>
-        <li>Adaptive UX and Latent Friction Resolution</li>
-        <li>Cross-functional Communication with Engineers, Designers, and Stakeholders</li>
-      </ul>
+    <section id="industries">
+      <h2 class="text-2xl font-semibold text-indigo-600">Industries</h2>
+      <p class="mt-2 text-lg">
+        Experience spans consumer platforms, creator tools, digital marketplaces, and AI-powered personalization.
+        Open to exploring new domains through signal-based product experimentation.
+      </p>
     </section>
 
-    <section>
+    <section id="connect">
       <h2 class="text-2xl font-semibold text-indigo-600">Let's Connect</h2>
       <p class="mt-2 text-lg">
         Open to contract, freelance, or strategic roles in product & platform. Reach out via <a href="mailto:your-email@example.com" class="text-blue-600 underline">email</a>
