@@ -3,86 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harmonic Path | Aarthi</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    function toggleServices() {
-      const section = document.getElementById('services-section');
-      section.classList.toggle('hidden');
+  <title>Home | Harmonic Path</title>
+  <meta name="description" content="Strategic product, AI, and experience design that align people, technology, and growth. We turn complexity into clarity and vision into reality.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #E8C26B;
+      --deep-indigo: #1F1B3A;
+      --soft-teal: #6EC5B8;
+      --ink: #0F1020;
+      --bone: #F6F5F2;
+      --mist: #E9ECEF;
     }
-  </script>
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bone);
+      color: var(--ink);
+    }
+
+    h1, h2, h3 { font-family: 'Inter Tight', 'Inter', sans-serif; }
+    
+    .sacred-geometry-bg {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23E8C26B' fill-opacity='0.08'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm9 10v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm9 10v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <header class="bg-indigo-700 text-white p-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold">Harmonic Path</h1>
-        <p class="text-lg mt-1">Product Strategy, Onboarding UX, and Signal-Led Design</p>
+<body>
+  <nav class="sticky top-0 z-50 bg-[#0F1020]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-[1280px] mx-auto px-6">
+      <div class="flex justify-between items-center h-[72px]">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/2cc4ed430_logoimage.png" alt="Harmonic Path Logo" class="w-12 h-12 object-cover rounded-full">
+          <span class="text-2xl font-bold text-white">Harmonic Path</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-lg font-medium text-[#E8C26B]">Case Study</a>
+          <a href="services.html" class="text-lg font-medium text-white/80 hover:text-[#E8C26B]">Services</a>
+          <a href="contact.html" class="text-lg font-medium text-white/80 hover:text-[#E8C26B]">About me</a>
+          <a href="contact.html" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)" class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold">Work with Me</a>
+        </div>
       </div>
-      <nav class="mt-4 md:mt-0 space-x-4">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#" onclick="toggleServices()" class="hover:underline">Services</a>
-        <a href="#case-studies" class="hover:underline">Case Studies</a>
-        <a href="#industries" class="hover:underline">Industries</a>
-        <a href="#connect" class="hover:underline">Connect</a>
-      </nav>
     </div>
-  </header>
+  </nav>
 
-  <main class="max-w-4xl mx-auto px-6 py-10 space-y-12">
-    <section id="about">
-      <h2 class="text-2xl font-semibold text-indigo-600">About Me</h2>
-      <p class="mt-2 text-lg">
-        I’m Aarthi — a Product & AI Strategist with a focus on onboarding UX, dynamic interfaces, and signal-first product design.
-        I work at the intersection of human experience and technology evolution, using clarity, simplicity, and depth to shape experiences that scale.
-      </p>
+  <main>
+    <section class="relative py-32 md:py-48 flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-[#F6F5F2] sacred-geometry-bg"></div>
+      <div class="absolute top-20 left-10 w-32 h-32 bg-[#6EC5B8]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 right-10 w-48 h-48 bg-[#FF7A6E]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
+        <div class="space-y-8">
+          <h1 class="text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight tracking-tighter text-[#0F1020]">
+            Weaving People, Technology, and Growth into
+            <span class="block bg-gradient-to-r from-[#1F1B3A] to-[#6EC5B8] bg-clip-text text-transparent mt-2">
+              Experiences that Connect, Innovate, and Scale
+            </span>
+          </h1>
+          <p class="text-lg md:text-xl text-[#0F1020]/70 max-w-4xl mx-auto leading-relaxed">
+            At Harmonic Path, we design AI and scalable systems that align human potential with measurable impact—where innovation meets flow.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="services.html" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)" class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] text-base font-semibold">
+              Explore Our Path →
+            </a>
+            <a href="contact.html" style="border-radius: 14px; padding: 12px 18px" class="inline-flex items-center text-[#E8C26B] border border-[#E8C26B]/45 hover:bg-[#E8C26B]/10 text-base font-semibold">
+              ✨ Start Your Alignment
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section id="services-section" class="hidden">
-      <h2 class="text-2xl font-semibold text-indigo-600">Services Offered</h2>
-      <ul class="list-disc list-inside mt-2 text-lg space-y-2">
-        <li>Product strategy workshops (zero-to-one to scale)</li>
-        <li>Onboarding UX redesigns tailored to intent modeling</li>
-        <li>Signal bootstrapping + latent user mapping</li>
-        <li>Platform diagnostics for churn and engagement issues</li>
-      </ul>
-      <p class="mt-4 text-lg">
-        Ready to collaborate? <a href="mailto:your-email@example.com" class="text-blue-600 underline">Get in touch</a>
-        or connect on <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="text-blue-600 underline">LinkedIn</a>.
-      </p>
-    </section>
-
-    <section id="case-studies">
-      <h2 class="text-2xl font-semibold text-indigo-600">Case Studies</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>
-          <a href="https://notion.so/Airbnb-Onboarding-Rewire-2853daf4a75a8074bd97d56ac476a721" target="_blank" class="text-blue-600 underline">
-            Airbnb Onboarding Rewire
+    <section class="py-24 bg-[#F6F5F2] relative overflow-hidden">
+      <div class="absolute inset-0 sacred-geometry-bg opacity-50"></div>
+      <div class="relative z-10 max-w-[1280px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-semibold text-[#0F1020] mb-4">Pathways Along the Harmonic Path</h2>
+               <p class="text-lg md:text-xl text-[#0F1020]/70 leading-relaxed max-w-3xl mx-auto">
+          Harmonic Path is a framework for creating products that transcend functionality to become transformative experiences. We harmonize technology, people, and business growth so solutions not only work—they deliver meaningful impact.
+        </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <a href="services.html#strategic-alchemy" class="block bg-green rounded-[20px] p-6 shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-2xl font-semibold text-[#0F1020] mb-4">Strategic Alchemy: From Vision to Reality</h3>
+            <div class="flex items-center text-[#E8C26B] font-semibold">Explore Pathway →</div>
           </a>
-          — Redesigning first-touch flows for latent intent users
-        </li>
-      </ul>
+          <a href="services.html#ai-data" class="block bg-white rounded-[20px] p-6 shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-2xl font-semibold text-[#0F1020] mb-4">Harmonic AI & Data Transformation</h3>
+            <div class="flex items-center text-[#E8C26B] font-semibold">Explore Pathway →</div>
+          </a>
+          <a href="services.html#experience" class="block bg-white rounded-[20px] p-6 shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-2xl font-semibold text-[#0F1020] mb-4">Harmonic Experience Optimization</h3>
+            <div class="flex items-center text-[#E8C26B] font-semibold">Explore Pathway →</div>
+          </a>
+          <a href="services.html#systems" class="block bg-white rounded-[20px] p-6 shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-2xl font-semibold text-[#0F1020] mb-4">Harmonic Systems Alchemy</h3>
+            <div class="flex items-center text-[#E8C26B] font-semibold">Explore Pathway →</div>
+          </a>
+          <a href="services.html#gtm" class="block bg-white rounded-[20px] p-6 shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-2xl font-semibold text-[#0F1020] mb-4">Go-to-Market Alchemy</h3>
+            <div class="flex items-center text-[#E8C26B] font-semibold">Explore Pathway →</div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="industries">
-      <h2 class="text-2xl font-semibold text-indigo-600">Industries</h2>
-      <p class="mt-2 text-lg">
-        Experience spans consumer platforms, creator tools, digital marketplaces, and AI-powered personalization.
-        Open to exploring new domains through signal-based product experimentation.
-      </p>
-    </section>
-
-    <section id="connect">
-      <h2 class="text-2xl font-semibold text-indigo-600">Let's Connect</h2>
-      <p class="mt-2 text-lg">
-        Open to contract, freelance, or strategic roles in product & platform. Reach out via <a href="mailto:your-email@example.com" class="text-blue-600 underline">email</a>
-        or connect via <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="text-blue-600 underline">LinkedIn</a>.
-      </p>
+    <section class="py-24 bg-gradient-to-br from-[#1F1B3A] to-[#0F1020] relative overflow-hidden">
+      <div class="absolute inset-0 sacred-geometry-bg opacity-20"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Align With Your Next Step on the Harmonic Path</h2>
+        <p class="text-lg text-white/80 max-w-3xl mx-auto mb-8">
+          If you are seeking products, experiences, or collaborations that resonate with human potential, amplify impact, and flow effortlessly, this is your gateway.
+        </p>
+        <a href="contact.html" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)" class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold">
+          ✨ Start Your Alignment →
+        </a>
+      </div>
     </section>
   </main>
-
-  <footer class="bg-gray-100 text-center text-sm p-4">
-    &copy; 2025 Harmonic Path. All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
