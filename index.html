@@ -42,7 +42,24 @@
 <span class="text-2xl font-bold text-white">Harmonic Path</span>
 </a>
 <div class="hidden md:flex items-center space-x-8">
-<a class="text-lg font-medium text-[#E8C26B]" href="https://www.notion.so/Airbnb-Onboarding-Rewire-Earning-trust-before-conversion-2853daf4a75a8074bd97d56ac476a721">Case Study</a>
+
+<div class="relative">
+  <button onclick="toggleDropdown()" class="text-lg font-medium text-[#E8C26B] focus:outline-none">
+    Case Study ▾
+  </button>
+  <div id="dropdownMenu" class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg hidden z-50">
+    <a href="/CaseStudy/AirbnbRewire" class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2] rounded-t-md">
+      Airbnb Rewire
+    </a>
+  </div>
+</div>
+<script>
+  function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+
 <a class="text-lg font-medium text-white/80 hover:text-[#E8C26B]" href="services.html">Services</a>
 <a class="text-lg font-medium text-white/80 hover:text-[#E8C26B]" href="contact.html">About me</a>
 <a class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold" href="contact.html" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">Work with Me</a>
@@ -123,9 +140,6 @@
 </div>
 </section>
 </main>
-
-
-
 <div class="modal" id="contactModal" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);">
 <div style="background:#fff; margin:10% auto; padding:20px; width:300px; position:relative;">
 <span onclick="document.getElementById('contactModal').style.display='none'" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
