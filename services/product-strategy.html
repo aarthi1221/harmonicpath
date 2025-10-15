@@ -1,0 +1,15 @@
+<script>
+  function loadServiceSection(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
+      })
+      .catch(err => console.error('Error loading service:', err));
+  }
+
+  // Load when page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    loadServiceSection('service-product-strategy', 'services/product-strategy.html');
+  });
+</script>
