@@ -71,12 +71,7 @@
 </div>
 </div>
 </nav>
-<div id="main-content">
-  <div class="flex justify-center items-center p-10 text-gray-400 text-sm">
-    Loading...
-  </div>
-</div>
-<main>
+<main id="main-content">
 <section class="relative py-12 md:py-20 flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 bg-[#F6F5F2] sacred-geometry-bg"></div>
 <div class="absolute top-20 left-10 w-32 h-32 bg-[#6EC5B8]/20 rounded-full blur-3xl animate-pulse"></div>
@@ -205,11 +200,6 @@ document.querySelectorAll('.open-modal').forEach(btn => {
       });
   }
 
-  // Optional auto-load based on hash
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.location.hash === "#workwithme") {
-      loadContent('howtoworkwithme.html');
-    }
   });
   // Optional auto-load based on hash
   window.addEventListener('DOMContentLoaded', () => {
