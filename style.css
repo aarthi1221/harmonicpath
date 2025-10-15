@@ -66,3 +66,11 @@ font-family: 'Inter Tight', 'Inter', sans-serif;
   flex: 0 1 60%;
   text-align: center;
 }
+
+.services-section .services-container {
+  flex-direction: row;
+}
+
+.services-section .single-center {
+  flex-direction: row;
+}
