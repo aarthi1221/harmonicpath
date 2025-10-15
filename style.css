@@ -105,3 +105,44 @@ service-card ul {
   margin: 0 auto;
   list-style-position: outside;
 }
+
+.service-card.single {
+  text-align: center;
+}
+
+/* clean bullet list look */
+.service-list {
+  text-align: left;
+  list-style: disc;
+  list-style-position: outside;
+  display: inline-block;
+  margin: 0 auto 1.5rem auto;
+  padding-left: 1.5rem;
+  text-indent: 0;
+}
+
+/* center the button nicely under the list */
+.cta-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.service-card.single {
+  text-align: center;
+}
+
+/* ✅ this version guarantees visible, properly aligned bullets */
+.service-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0 auto 1.5rem auto;
+  padding-left: 1.5rem;
+  text-align: left;
+  display: block;
+}
+
+/* centers the button cleanly below the list */
+.cta-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
