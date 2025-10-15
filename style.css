@@ -243,9 +243,9 @@ service-card ul {
   line-height: 1.6;
 }
 
-.service-card ul {
-  margin-top: auto; /* pushes list down neatly if needed */
-}
+/*.service-card ul {
+  margin-top: auto;
+}*/
 
 .service-card {
   background: var(--bone);
@@ -253,7 +253,6 @@ service-card ul {
   padding: 2rem 1.75rem; /* slightly tighter */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
 /* -------------------- BULLET LIST -------------------- */
 .service-list {
   list-style-type: disc;
