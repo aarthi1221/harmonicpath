@@ -93,3 +93,15 @@ font-family: 'Inter Tight', 'Inter', sans-serif;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(232, 194, 107, 0.35);
 }
+
+service-card ul {
+  list-style-position: outside;
+  margin-left: 1.2rem;
+}
+
+.service-card.single ul {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  list-style-position: outside;
+}
