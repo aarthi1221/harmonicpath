@@ -122,15 +122,9 @@ We bring technology, humanity, and growth into coherence.We craft solutions that
 </section>
 <section style="background: linear-gradient(to bottom right, #f6f5f2, #ddd6c1); padding: 4rem 1rem;">
   <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px;">
-
-    <!-- Top Two Cards -->
-    <div style="flex: 1 1 calc(50% - 10px); background: white; border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);" id="service1"></div>
-
-    <div style="flex: 1 1 calc(50% - 10px); background: white; border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);" id="service2"></div>
-
-    <!-- Full Width Card -->
-    <div style="flex: 1 1 100%; background: white; border-radius: 16px; padding: 24px; margin-top: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);" id="service3"></div>
-
+    <div style="flex: 1 1 calc(50% - 10px); background-color: #fefdf9; padding: 2rem; ..." id="service1"></div>
+    <div style="flex: 1 1 calc(50% - 10px); background-color: #fefdf9; padding: 2rem; ..." id="service2"></div>
+    <div style="flex: 1 1 100%; background-color: #fefdf9; padding: 2rem; ..." id="service3"></div>
   </div>
 </section>
 <section class="py-12 bg-gradient-to-br from-[#1F1B3A] to-[#0F1020] relative overflow-hidden">
@@ -192,18 +186,20 @@ document.querySelectorAll('.open-modal').forEach(btn => {
   });
 </script>
 <script>
-  // Load external HTML content into cards
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch('product-vision.html').then(res => res.text()).then(data => {
-      document.getElementById('service1').innerHTML = data;
-    });
-    fetch('experience-design.html').then(res => res.text()).then(data => {
-      document.getElementById('service2').innerHTML = data;
-    });
-    fetch('launch-resonance.html').then(res => res.text()).then(data => {
-      document.getElementById('service3').innerHTML = data;
-    });
-  });
+  async function loadServices() {
+    try {
+      const s1 = await fetch('product-vision.html');
+      const s2 = await fetch('experience-design.html');
+      const s3 = await fetch('launch-resonance.html');
+      document.getElementById('service1').innerHTML = await s1.text();
+      document.getElementById('service2').innerHTML = await s2.text();
+      document.getElementById('service3').innerHTML = await s3.text();
+    } catch (error) {
+      console.error('Error loading services:', error);
+    }
+  }
+  // Trigger load on page load
+  window.addEventListener('DOMContentLoaded', loadServices);
 </script>
 </body>
 </html>
