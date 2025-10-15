@@ -27,7 +27,7 @@ font-family: 'Inter Tight', 'Inter', sans-serif;
 }
 
 .services-section {
-  background: linear-gradient(to bottom right, #f6f5f2, #ddd6c1);
+  background-color: #E0F6F2; /* matches your upper teal */
   padding: 4rem 1rem;
 }
 
