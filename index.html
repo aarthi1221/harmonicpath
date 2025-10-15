@@ -72,7 +72,7 @@
 </div>
 </nav>
 <main id="main-content">
-<section class="relative py-12 md:py-20 flex items-center justify-center overflow-hidden">
+<section class="relative py-12 md:py-20 overflow-hidden">
 <div class="absolute inset-0 bg-[#F6F5F2] sacred-geometry-bg"></div>
 <div class="absolute top-20 left-10 w-32 h-32 bg-[#6EC5B8]/20 rounded-full blur-3xl animate-pulse"></div>
 <div class="absolute bottom-20 right-10 w-48 h-48 bg-[#FF7A6E]/20 rounded-full blur-3xl animate-pulse"></div>
@@ -104,7 +104,7 @@
 </div>
 </div>
 </section>
-<section class="py-12 bg-[#D3F3EE] relative overflow-hidden">
+<section class="py-12 bg-[#D3F3EE] relative">
 <div class="absolute inset-0 sacred-geometry-bg opacity-50"></div>
 <div class="relative z-10 max-w-[1280px] mx-auto px-6">
 <div class="text-center mb-4">
@@ -128,7 +128,7 @@ We bring technology, humanity, and growth into coherence.We craft solutions that
     <div id="service3" style="flex: 1 1 calc(50% - 10px); background-color: #fefdf9; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"></div>
   </div>
 </section>
-<section class="py-12 bg-gradient-to-br from-[#1F1B3A] to-[#0F1020] relative overflow-hidden">
+<section class="py-12 bg-gradient-to-br from-[#1F1B3A] to-[#0F1020] relative">
 <div class="absolute inset-0 sacred-geometry-bg opacity-20"></div>
 <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
 <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Align With Your Next Step on the Harmonic Path</h2>
@@ -189,9 +189,9 @@ document.querySelectorAll('.open-modal').forEach(btn => {
 <script>
   async function loadServices() {
     try {
-      const s1 = await fetch('product-vision.html');
-      const s2 = await fetch('experience-design.html');
-      const s3 = await fetch('launch-resonance.html');
+      const s1 = await fetch('Services/product-vision.html');
+      const s2 = await fetch('Services/experience-design.html');
+      const s3 = await fetch('Services/launch-resonance.html');
       document.getElementById('service1').innerHTML = await s1.text();
       document.getElementById('service2').innerHTML = await s2.text();
       document.getElementById('service3').innerHTML = await s3.text();
