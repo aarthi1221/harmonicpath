@@ -149,10 +149,10 @@ service-card ul {
 
 /* -------------------- SERVICE SECTION -------------------- */
 
-.services-section {
+/*.services-section {
   background: linear-gradient(to bottom right, #f6f5f2, #ddd6c1);
   padding: 4rem 1rem;
-}
+}*/
 
 /* layout for two top cards + one centered below */
 .services-container {
