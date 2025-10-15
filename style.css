@@ -303,3 +303,15 @@ service-card ul {
   max-width: 80%;
 }
 
+.full-width-banner {
+  background: linear-gradient(120deg, #1B9C9C, #E8C26B, #FFF2CC);
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
