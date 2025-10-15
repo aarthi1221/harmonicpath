@@ -65,14 +65,16 @@
   }
 </script>
 <a class="text-lg font-medium text-white/80 hover:text-[#E8C26B]" href="contact.html">About me</a>
-<a class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold" href="#workwithme" onclick="loadPage('howtoworkwithme.html')" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">Work with Me</a>
+<a class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold" href="#workwithme" onclick="loadContent('howtoworkwithme.html')" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">Work with Me</a>
 <li></li>
 </div>
 </div>
 </div>
 </nav>
 <div id="main-content">
-  <!-- Default content goes here -->
+  <div class="flex justify-center items-center p-10 text-gray-400 text-sm">
+    Loading...
+  </div>
 </div>
 <main>
 <section class="relative py-12 md:py-20 flex items-center justify-center overflow-hidden">
@@ -95,7 +97,7 @@
 <a class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] text-base font-semibold open-modal" href="howtoworkwithme.html" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25) cursor:pointer;">
               Explore Our Path →
             </a>
-<a class="inline-flex items-center text-[#E8C26B] border border-[#E8C26B]/45 hover:bg-[#E8C26B]/10 text-base font-semibold" href=#workwithme onclick="loadPage('howtoworkwithme.html')" style="border-radius: 14px; padding: 12px 18px">
+<a class="inline-flex items-center text-[#E8C26B] border border-[#E8C26B]/45 hover:bg-[#E8C26B]/10 text-base font-semibold" href=#workwithme onclick="loadContent('howtoworkwithme.html')" style="border-radius: 14px; padding: 12px 18px">
              ✨ Start Your Alignment
 </a>
 </div>
@@ -185,25 +187,34 @@ document.querySelectorAll('.open-modal').forEach(btn => {
 });
 </script>
 <script>
-  function loadPage(page) {
-    fetch(page)
+  function loadContent(path) {
+    const contentDiv = document.getElementById('main-content'); // this MUST match the ID above
+
+    // Optional: visual cue
+    contentDiv.innerHTML = `<div class="p-10 text-gray-500 text-center">Loading...</div>`;
+
+    fetch(path)
       .then(response => response.text())
       .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const newContent = doc.querySelector('body').innerHTML;
-        document.getElementById('main-content').innerHTML = newContent;
-        window.scrollTo(0, 0);
+        contentDiv.innerHTML = html;
+        window.scrollTo({ top: contentDiv.offsetTop, behavior: 'smooth' });
       })
-      .catch(error => {
-        console.error('Error loading page:', error);
+      .catch(err => {
+        contentDiv.innerHTML = "<p class='text-red-500'>Error loading content.</p>";
+        console.error(err);
       });
   }
 
-  // Optional: Auto-load based on hash
+  // Optional auto-load based on hash
   window.addEventListener('DOMContentLoaded', () => {
     if (window.location.hash === "#workwithme") {
-      loadPage('howtoworkwithme.html');
+      loadContent('howtoworkwithme.html');
+    }
+  });
+  // Optional auto-load based on hash
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === "#workwithme") {
+      loadContent('howtoworkwithme.html');
     }
   });
 </script>
