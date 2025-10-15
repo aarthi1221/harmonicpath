@@ -115,10 +115,19 @@
 We bring technology, humanity, and growth into coherence.We craft solutions that align with who they’re for, what they’re becoming, and why they matter now.
         </p>
 </div>
-<div class="service-card" id="service-product-vision"></div>
-<div class="service-card" id="service-experience-design"></div>
-<div class="service-card" id="service-launch-resonance"></div>
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-[#0F1020]">Services</h2>
+    <p class="text-[#1F1B3A] mt-2">Ways I help teams align vision, systems, and experience.</p>
+  </div>
+
+  <div id="services-grid" class="flex flex-wrap gap-6 justify-center">
+    <!-- Service cards get injected here -->
+    <div style="flex: 1 1 calc(50% - 10px);" id="service1"></div>
+    <div style="flex: 1 1 calc(50% - 10px);" id="service2"></div>
+    <div style="flex: 1 1 100%;" id="service3"></div>
+  </div>
 </section>
+
 <section class="py-12 bg-gradient-to-br from-[#1F1B3A] to-[#0F1020] relative overflow-hidden">
 <div class="absolute inset-0 sacred-geometry-bg opacity-20"></div>
 <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -177,25 +186,20 @@ document.querySelectorAll('.open-modal').forEach(btn => {
     }
   });
 </script>
+
 <script>
-  function loadServiceCards() {
-    const services = [
-      { id: "service-product-vision", file: "services/product-vision.html" },
-      { id: "service-experience-design", file: "services/experience-design.html" },
-      { id: "service-launch-resonance", file: "services/launch-resonance.html" }
-    ];
-
-    services.forEach(({ id, file }) => {
-      fetch(file)
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById(id).innerHTML = data;
-        })
-        .catch(err => console.error(`Failed to load ${file}`, err));
+  // Load external HTML content into cards
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('product-vision.html').then(res => res.text()).then(data => {
+      document.getElementById('service1').innerHTML = data;
     });
-  }
-
-  document.addEventListener("DOMContentLoaded", loadServiceCards);
+    fetch('experience-design.html').then(res => res.text()).then(data => {
+      document.getElementById('service2').innerHTML = data;
+    });
+    fetch('launch-resonance.html').then(res => res.text()).then(data => {
+      document.getElementById('service3').innerHTML = data;
+    });
+  });
 </script>
 </body>
 </html>
