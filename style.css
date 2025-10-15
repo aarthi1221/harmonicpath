@@ -164,10 +164,10 @@ service-card ul {
   justify-content: center;
 }
 
-.services-container.single-center {
+/* .services-container.single-center {
   justify-content: center;
   margin-top: 40px;
-}
+} */
 
 /* -------------------- CARD STYLING -------------------- */
 .service-card {
@@ -189,11 +189,11 @@ service-card ul {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* centered single card */
+/* centered single card
 .service-card.single {
   flex: 0 1 60%;
   text-align: center;
-}
+} */
 
 /* -------------------- TEXT STYLING -------------------- */
 .service-card h3 {
