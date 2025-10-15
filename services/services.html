@@ -1,0 +1,27 @@
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" id="services-section">
+  <!-- Product Strategy & AI Systems Design -->
+  <div id="product-vision"></div>
+
+  <!-- Signal-Driven Experience Design -->
+  <div id="experience-design"></div>
+
+  <!-- Launch Resonance -->
+  <div id="launch-resonance"></div>
+</section>
+
+<script>
+  // Dynamically load each service block HTML into its container
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('services/product-vision.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('product-vision').innerHTML = data);
+
+    fetch('services/signal-design.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('experience-design').innerHTML = data);
+
+    fetch('services/launch-resonance.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('launch-resonance').innerHTML = data);
+  });
+</script>
