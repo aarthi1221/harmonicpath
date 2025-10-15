@@ -217,6 +217,18 @@ service-card ul {
   margin: 0;
 }
 
+.services-container {
+  display: flex;
+  align-items: stretch; /* makes all cards equal height */
+  gap: 2rem; /* spacing between cards */
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* -------------------- BULLET LIST -------------------- */
 .service-list {
   list-style-type: disc;
