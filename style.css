@@ -14,6 +14,8 @@ background-color: var(--bone);
 color: var(--ink);
 margin: 0;
 padding: 0;
+flex: 1 1 calc(50% - 10px); // for first 2 cards
+flex: 1 1 100%;             // for 3rd card (full width below)
 }
 
 /* Heading font */
