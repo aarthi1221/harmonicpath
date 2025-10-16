@@ -75,7 +75,7 @@
         </div>
 
         <a class="text-lg font-medium text-white/80 hover:text-[#E8C26B]" 
-           href="#contact" onclick="loadContent('contact.html')">
+           href="#aboutme" onclick="loadContent('aboutme.html')">
           About me
         </a>
 
@@ -343,6 +343,9 @@ document.querySelectorAll('.open-modal').forEach(btn => {
     }
     if (window.location.hash === "#contact") {
       loadContent('contact.html');
+    }
+    if (window.location.hash === "#aboutme") {
+      loadContent('aboutme.html');
     }
   });
 </script>
