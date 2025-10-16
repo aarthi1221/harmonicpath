@@ -253,6 +253,11 @@ service-card ul {
   padding: 2rem 1.75rem; /* slightly tighter */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+.service-card {
+  padding-bottom: 1.25rem; /* fine control for base padding */
+}
+
 /* -------------------- BULLET LIST -------------------- */
 .service-list {
   list-style-type: disc;
