@@ -400,3 +400,8 @@ p {
 #mobile-menu {
   transition: all 0.3s ease-in-out;
 }
+
+a:hover {
+  text-shadow: 0 0 6px rgba(232,194,107,0.5);
+}
+
