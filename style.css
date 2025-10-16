@@ -258,6 +258,10 @@ service-card ul {
   padding-bottom: 1.25rem; /* fine control for base padding */
 }
 
+
+p {
+  line-height: 1.75;
+}
 /* -------------------- BULLET LIST -------------------- */
 .service-list {
   list-style-type: disc;
@@ -298,6 +302,7 @@ service-card ul {
 .service-card.single .explore-btn {
   align-self: center;
 }
+
 
 /* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 900px) {
@@ -355,4 +360,5 @@ service-card ul {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+
 
