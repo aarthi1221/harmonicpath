@@ -144,11 +144,24 @@
     menu.classList.toggle("hidden");
   }
 
-  document.getElementById("menu-toggle").addEventListener("click", function() {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Toggle mobile menu open/close
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close mobile menu on any link click (works dynamically too)
+    document.addEventListener("click", (e) => {
+      if (e.target.tagName === "A" && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
   });
 </script>
+
 <!-- <nav class="sticky top-0 z-50 backdrop-blur-md border-b border-white/10" 
      style="background: linear-gradient(45deg, #136666, #1B9C9C, #E8C26B);">
 <div class="max-w-[1280px] mx-auto px-6">
@@ -407,7 +420,6 @@
 
   <section class="mid-cta-banner" style="background: linear-gradient(45deg, #136666, #1B9C9C, #E8C26B); padding: 3rem 2rem; text-align: center; margin: 4rem 0; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);"> --->
   
-
   <h2 style="font-size: 1.8rem; color: #222; margin-bottom: 1rem;">💫 Let’s Bring Your Vision to Resonance 💫</h2>
     <p class="text-lg text-white/80 max-w-3xl mx-auto mb-4">
           If you are teams or orgs designing AI-first interfaces or workflows with real-time personalization or recommendation layers that unloacks human potential, evolves and scale with user-intent, this space is for you.
