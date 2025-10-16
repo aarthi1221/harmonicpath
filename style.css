@@ -382,3 +382,15 @@ p {
   animation: gradient-move 20s ease infinite;
 }
 
+@keyframes softFade {
+  0%,100% { opacity: 0.95; }
+  50% { opacity: 1; }
+}
+.animate-softFade { 
+  animation: softFade 6s ease-in-out infinite; 
+}
+@keyframes slowPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.animate-slowPulse { animation: slowPulse 12s ease-in-out infinite; }
