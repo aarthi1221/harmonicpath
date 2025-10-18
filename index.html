@@ -1,231 +1,358 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harmonic Path</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home | Harmonic Path</title>
+<meta content="Strategic product, AI, and experience design that align people, technology, and growth. We turn complexity into clarity and vision into reality." name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+      --gold: #E8C26B;
+      --deep-indigo: #1F1B3A;
+      --soft-teal: #6EC5B8;
+      --ink: #0F1020;
+      --bone: #F6F5F2;
+      --mist: #E9ECEF;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bone);
+      color: var(--ink);
+    }
 
-  <body class="bg-[#F6F5F2] text-[#0F1020] overflow-x-hidden">
-    <!-- Navigation (unchanged) -->
-    <header
-      class="fixed top-0 left-0 right-0 z-50 bg-[#0F1020]/80 backdrop-blur-md text-white py-4"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm md:text-base"
-      >
-        <h1 class="font-bold text-lg md:text-xl tracking-tight">
-          Harmonic Path
-        </h1>
-        <nav class="hidden md:flex space-x-6 font-medium">
-          <a
-            href="#about"
-            onclick="loadContent('aboutme.html')"
-            class="hover:text-[#E8C26B]"
-            >About</a
-          >
-          <a
-            href="#workwithme"
-            onclick="loadContent('howtoworkwithme.html')"
-            class="hover:text-[#E8C26B]"
-            >Work With Me</a
-          >
-          <a
-            href="#contact"
-            onclick="loadContent('contact.html')"
-            class="hover:text-[#E8C26B]"
-            >Contact</a
-          >
-        </nav>
+    h1, h2, h3 { font-family: 'Inter Tight', 'Inter', sans-serif; }
+    
+    .sacred-geometry-bg {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23E8C26B' fill-opacity='0.08'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm9 10v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm9 10v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-10 0v9h-9v-9h9zm-9 10h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+<!-- <nav class="sticky top-0 z-50 bg-[#0F1020]/95 backdrop-blur-md border-b border-white/10"> -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md border-b border-white/10"
+     style="background: linear-gradient(45deg, #136666, #1B9C9C, #E8C26B);">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="flex justify-between items-center h-[72px]">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-3" href="index.html">
+        <img alt="Harmonic Path Logo" class="w-12 h-12 object-cover rounded-full"
+             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/2cc4ed430_logoimage.png"/>
+        <span class="text-2xl font-bold text-white">Harmonic Path</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <!-- Dropdown -->
+        <div class="relative">
+          <button onclick="toggleDropdown()" 
+                  class="text-lg font-medium text-[#E8C26B] focus:outline-none">
+            Case Study ▾
+          </button>
+          <div id="dropdownMenu" 
+               class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg hidden z-50">
+            <a href="/CaseStudy/AirbnbRewire"
+               target="_blank"
+               class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2] rounded-t-md">
+              Airbnb Rewire
+            </a>
+            <a href="/CaseStudy/LinkedinFeedRewire"
+               target="_blank"
+               class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2]">
+              LinkedIn Feed Rewire
+            </a>
+            <a href="/CaseStudy/EtsyRecommenderRewire" 
+               target="_blank"
+               class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2] rounded-b-md">
+              Etsy Recommender Model Rewire
+            </a>
+          </div>
+        </div>
+
+        <a class="text-lg font-medium text-white/80 hover:text-[#E8C26B]" 
+           href="#aboutme" onclick="loadContent('aboutme.html')">
+          About me
+        </a>
+
+        <a class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold"
+           href="#workwithme" onclick="loadContent('howtoworkwithme.html')"
+           style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">
+          Work with Me
+        </a>
       </div>
-    </header>
 
-    <main id="main-content" class="pt-24">
-      <!-- 🔹 START refined Hero -->
-      <section
-        class="relative text-center py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
-        style="
-          background: linear-gradient(180deg, #f5f7f3 0%, #d6ede8 40%, #b0ddd8 100%);
-        "
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-[#E8C26B]/20 via-transparent to-[#B0DDD8]/25 blur-2xl animate-slowPulse"
-        ></div>
+      <!-- Mobile Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto">
-          <h1
-            class="text-3xl md:text-5xl font-bold text-[#0F1020]/90 mb-6 leading-snug tracking-tight"
-          >
-            Where
-            <span class="font-extrabold text-[#0F1020]">Signal</span> Becomes
-            System <br class="hidden sm:block" />
-            &amp;
-            <span class="font-extrabold text-[#0F1020]">Vision</span> Shapes
-            Experience
-          </h1>
-
-          <p
-            class="text-2xl md:text-3xl text-[#2E7F7B] font-semibold mb-6 leading-snug"
-          >
-            We build emotionally intelligent systems that listen, adapt, and
-            scale— <br class="hidden sm:block" /> where every experience begins
-            with intent and ends in clarity.
-          </p>
-
-          <p
-            class="text-lg md:text-xl text-[#0F1020]/80 leading-relaxed max-w-3xl mx-auto mt-4"
-          >
-            At
-            <span class="font-semibold text-[#0F1020]">Harmonic Path</span>,
-            people aren’t users—they’re signal sources and co-creators. When
-            intent leads design, clarity and resonance follow naturally.
-          </p>
-
-          <div class="flex flex-wrap justify-center gap-6 mt-10">
-            <a
-              href="#workwithme"
-              onclick="loadContent('howtoworkwithme.html')"
-              class="px-8 py-4 bg-[#E8C26B] text-[#0F1020] font-semibold rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >🌿 Explore Our Path</a
-            >
-            <a
-              href="#contact"
-              onclick="loadContent('contact.html')"
-              class="px-8 py-4 border-2 border-[#E8C26B] text-[#0F1020] font-semibold rounded-xl hover:bg-[#E8C26B]/20 hover:scale-105 transition-all duration-300"
-              >🌀 Start Your Alignment</a
-            >
-          </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" 
+         class="hidden md:hidden flex flex-col space-y-4 px-6 pb-6 bg-[#0F1020]/90 text-white rounded-b-xl">
+      <div class="relative">
+        <button onclick="toggleDropdownMobile()" 
+                class="text-lg font-medium text-[#E8C26B] focus:outline-none">
+          Case Study ▾
+        </button>
+        <div id="dropdownMenuMobile" 
+             class="hidden mt-2 bg-white rounded-md shadow-lg">
+          <a href="/CaseStudy/AirbnbRewire" 
+             class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2] rounded-t-md">
+            Airbnb Rewire
+          </a>
+          <a href="/CaseStudy/LinkedinFeedRewire" 
+             class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2]">
+            LinkedIn Feed Rewire
+          </a>
+          <a href="/CaseStudy/EtsyRecommenderRewire" 
+             class="block px-4 py-2 text-sm text-[#0F1020] hover:bg-[#F6F5F2] rounded-b-md">
+            Etsy Recommender Model Rewire
+          </a>
         </div>
-      </section>
-      <!-- 🔹 END refined Hero -->
+      </div>
 
-      <!-- 🔹 START refined Choose Your Harmonic Path -->
-      <section class="py-16 bg-[#D3F3EE] relative">
-        <div class="absolute inset-0 sacred-geometry-bg opacity-50"></div>
-        <div class="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-semibold text-[#0F1020] mb-4">
-            Choose your Harmonic Path
-          </h2>
-          <h3
-            class="text-xl md:text-2xl font-semibold text-[#0F1020]/80 mb-6"
-          >
-            Where resonance becomes strategy—and intuition meets execution.
-          </h3>
+      <!-- <a href="#contact" 
+         class="text-lg font-medium text-white/80 hover:text-[#E8C26B]"
+         onclick="loadContent('contact.html')">About me</a> -->
+      <a href="#workwithme" class="inline-block bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold text-center rounded-lg py-3 shadow-md transition mx-auto w-[85%]"
+      onclick="loadContent('howtoworkwithme.html')">
+      Work with Me
+      </a>
+    </div>
+  </div>
+</nav>
 
-          <p
-            class="text-lg md:text-xl text-[#0F1020]/70 leading-relaxed max-w-4xl mx-auto"
-          >
-            The Harmonic Path isn’t a framework—it’s a way of designing products
-            that sense, adapt, and evolve. We bring vision, experience, and
-            systems into resonance—so innovation flows with purpose and scales
-            with clarity.
-          </p>
+<!-- JS for Dropdowns & Mobile Menu -->
+<script>
+  function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("hidden");
+  }
 
-          <p
-            class="text-lg md:text-xl font-semibold text-[#0F1020] leading-relaxed max-w-3xl mx-auto mt-8 px-4 py-3 rounded-xl inline-block"
-            style="
-              background: linear-gradient(
-                90deg,
-                rgba(232, 194, 107, 0.25) 0%,
-                rgba(222, 240, 237, 0) 50%,
-                rgba(232, 194, 107, 0.25) 100%
-              );
-              backdrop-filter: blur(2px);
-            "
-          >
-            ✨ Explore the paths below and choose the one that resonates most.
-          </p>
-        </div>
-      </section>
-      <!-- 🔹 END refined Choose Your Harmonic Path -->
+  function toggleDropdownMobile() {
+    const menu = document.getElementById("dropdownMenuMobile");
+    menu.classList.toggle("hidden");
+  }
 
-      <!-- 🔹 START refined Three Pillar Cards -->
-      <section class="py-16 bg-[#F6F5F2]" id="pillars">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-left">
-          <!-- Card 1 -->
-          <div
-            class="p-8 rounded-2xl bg-gradient-to-b from-[#FFFFFF] to-[#F0F7F5] shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            <h3 class="text-2xl font-semibold text-[#0D4D4D] mb-2">
-              Product Vision & Flow
-            </h3>
-            <p class="text-[#0F1020]/70 italic mb-3">
-              Find direction in the unknown—clarity from signal.
-            </p>
-            <p class="text-[#0F1020]/80 mb-4">
-              Transform ambiguity into a resonant product direction. Translate
-              signals into strategy and journeys that flow from insight to
-              scale.
-            </p>
-            <p class="font-semibold text-[#0F1020] mb-2">
-              <strong>What this unlocks:</strong>
-            </p>
-            <ul class="space-y-2 text-[#0F1020]/80">
-              <li>• Vision frameworks grounded in real intent</li>
-              <li>• Strategy maps that evolve with feedback</li>
-              <li>• Product flow that scales clarity, not complexity</li>
-            </ul>
-          </div>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-          <!-- Card 2 -->
-          <div
-            class="p-8 rounded-2xl bg-gradient-to-b from-[#FFFFFF] to-[#F0F7F5] shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            <h3 class="text-2xl font-semibold text-[#0D4D4D] mb-2">
-              Signal-Driven Experience Design
-            </h3>
-            <p class="text-[#0F1020]/70 italic mb-3">
-              Design experiences that listen, learn, and align.
-            </p>
-            <p class="text-[#0F1020]/80 mb-4">
-              Blend applied AI, UX signals, and adaptive systems to build
-              emotionally intelligent products where technology feels alive and
-              human.
-            </p>
-            <p class="font-semibold text-[#0F1020] mb-2">
-              <strong>What this unlocks:</strong>
-            </p>
-            <ul class="space-y-2 text-[#0F1020]/80">
-              <li>• Emotionally intelligent user journeys</li>
-              <li>• Signal-responsive feedback loops</li>
-              <li>• Experiences that evolve with every interaction</li>
-            </ul>
-          </div>
+    // Toggle mobile menu open/close
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
 
-          <!-- Card 3 -->
-          <div
-            class="p-8 rounded-2xl bg-gradient-to-b from-[#FFFFFF] to-[#F0F7F5] shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            <h3 class="text-2xl font-semibold text-[#0D4D4D] mb-2">
-              Launch Resonance
-            </h3>
-            <p class="text-[#0F1020]/70 italic mb-3">
-              Go to market with clarity and connection.
-            </p>
-            <p class="text-[#0F1020]/80 mb-4">
-              Translate product value into human connection through positioning,
-              storytelling, and experience flows that build trust before
-              conversion.
-            </p>
-            <p class="font-semibold text-[#0F1020] mb-2">
-              <strong>What this unlocks:</strong>
-            </p>
-            <ul class="space-y-2 text-[#0F1020]/80">
-              <li>• Cohesive brand and product narratives</li>
-              <li>• Launch frameworks rooted in trust</li>
-              <li>• Sustained resonance beyond conversion</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- 🔹 END refined Three Pillar Cards -->
-    </main>
+    // Close mobile menu on any link click (works dynamically too)
+    document.addEventListener("click", (e) => {
+      if (e.target.tagName === "A" && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  });
+</script>
+<main id="main-content">
+<p class="text-lg md:text-xl text-[#0F1020]/70 leading-relaxed max-w-3xl mx-auto mt-4">
+We help founders and teams design AI-driven, emotionally intelligent systems that evolve through feedback, empathy, and resonance.
+</p>
+<section class="relative text-center py-16 px-6 md:px-12 lg:px-24 overflow-hidden"
+         style="background: linear-gradient(180deg,
+           #F5F7F3 0%, 
+           #D6EDE8 40%, 
+           #B0DDD8 100%);">
 
-    <footer class="text-center py-10 text-[#0F1020]/70">
-      <p>
-        © 2025 Harmonic Path — Designed with clarity, resonance, and intent.
-      </p>
-    </footer>
-  </body>
+  <!-- Subtle animated background gradient -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#E8C26B]/20 via-transparent to-[#B0DDD8]/25 blur-2xl animate-slowPulse"></div>
+<div class="relative z-10">
+<!-- <h1 class="text-3xl md:text-5xl font-extrabold text-[#0F1020] mb-4 leading-tight tracking-tight whitespace-nowrap">
+Where <br class="sm:hidden"/> Signal Becomes System & <br class="sm:hidden"/> Vision Shapes Experience
+</h1> -->
+<h1 class="text-3xl md:text-5xl font-bold text-[#0F1020]/90 mb-6 leading-snug tracking-tight">
+  Where <span class="font-extrabold text-[#0F1020]">Signal</span> Becomes System <br class="hidden sm:block"/>
+  &amp; <span class="font-extrabold text-[#0F1020]">Vision</span> Shapes Experience
+</h1>
+    <h2 class="text-2xl md:text-3xl font-semibold text-[#2E7F7B] mb-8 
+               tracking-wide leading-snug">
+      We build emotionally intelligent systems that listen, adapt, and scale—where every experience begins with intent and ends in clarity.
+    </h2>
+
+<p class="text-lg md:text-xl text-[#0F1020]/80 leading-relaxed max-w-4xl mx-auto mt-4">  
+  At <span class="font-semibold text-[#0F1020]">Harmonic Path</span>, people aren’t users—they’re signal sources and experience co-creators. When intent leads design, clarity and resonance follow naturally.
+</p>
+<div class="flex flex-wrap justify-center gap-10 mt-6">
+<!-- Explore Our Path -->
+<a class="inline-block bg-[#E8C26B] inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] text-base font-semibold px-7 py-3" href="#workwithme" onclick="loadContent('howtoworkwithme.html')" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25) cursor:pointer; duration-300 hover:shadow-lg hover:scale-105">
+             🌿 Explore Our Path
+</a>
+<!-- Start Your Alignment -->
+<a class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] text-base font-semibold px-7 py-3"
+   href="#contact" onclick="loadContent('contact.html')" 
+   style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25); cursor: pointer; duration-300 hover:shadow-lg hover:scale-105">
+   🌀 Start Your Alignment
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-[#D3F3EE] relative">
+<div class="absolute inset-0 sacred-geometry-bg opacity-50"></div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-4">
+<h2 class="text-3xl md:text-4xl font-semibold text-[#0F1020] mb-4">Choose your Harmonic Path</h2>
+<h3 class="text-xl md:text-xl font-semibold text-[#0F1020] mb-4">
+  Where resonance becomes strategy—and intuition meets execution.
+</h3>
+<p class="text-lg md:text-xl text-[#0F1020]/70 leading-relaxed max-w-4xl mx-auto">
+  The Harmonic Path is more than a framework—it’s a way of designing products that sense, adapt, and evolve.
+  We align vision, experience, and systems—so innovation flows with purpose and resonates at scale.
+</p>
+<p class="text-lg md:text-xl font-semibold text-[#0F1020] leading-relaxed max-w-3xl mx-auto mt-6 px-4 py-3 rounded-xl inline-block text-center"
+   style="background: linear-gradient(90deg,
+     rgba(232,194,107,0.25) 0%,
+     rgba(222,240,237,0.0) 50%,
+     rgba(232,194,107,0.25) 100%);
+     backdrop-filter: blur(2px);">
+  ✨ Explore the paths below and choose the one that resonates most.
+</p>
+</div>
+  <!-- <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-[#0F1020]">Services</h2>
+    <p class="text-[#1F1B3A] mt-2">Ways I help teams align vision, systems, and experience.</p>
+    </div> -->
+  </div>
+<div class="services-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+  <!-- Card 1 -->
+  <div class="service-card" style="flex: 1 1 300px; max-width: 380px;">
+    <h3>Product Vision & Flow</h3>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <p class="italic">From ambiguity to resonance—crafting journeys that feel, flow, and scale.</p>
+    <p>We shape emerging ideas through strategy, signal-led discovery, and architecture that’s intuitive, scalable, and experience-driven.</p>
+    <h4>What this unlocks:</h4>
+    <ul class="service-list">
+      <li>Product vision & roadmap refinement</li>
+      <li>User journey + emotional posture mapping</li>
+      <li>Signal bootstrapping & intent modeling</li>
+    </ul>
+    <!-- <a href="howtoworkwithme.html" class="explore-btn">Discover the Path →</a> -->
+  </div>
+
+  <!-- Card 2 -->
+  <div class="service-card" style="flex: 1 1 300px; max-width: 380px;">
+    <h3>Signal-Driven Experience Design</h3>
+    <p class="italic">Where behavior meets intelligence—in systems that adapt and align.</p>
+    <p>We blend applied AI, UX signals, and adaptive systems to build emotionally intelligent products that evolve with users and scale with clarity.</p>
+    <h4>What this unlocks:</h4>
+    <ul class="service-list">
+  <li>Designing experience systems</li>
+  <li>Crafting intent-adaptive UX</li>
+  <li>Integrating applied AI for recommendation, personalization, and filtering</li>
+</ul>
+   <!-- <a href="howtoworkwithme.html" class="explore-btn">Discover the Path →</a> -->
+  </div>
+
+  <!-- Card 3 -->
+  <div class="service-card" style="flex: 1 1 300px; max-width: 380px;">
+    <h3>Launch Resonance</h3>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <p class="italic">Go to market with clarity. Build trust in every interaction.</p>
+    <p>We translate product value into human connection through positioning, messaging, and experience flow that earn trust before conversion.</p>
+    <h4>What this unlocks:</h4>
+    <ul class="service-list">
+      <li>Narrative & story scaffolding</li>
+      <li>Positioning & messaging architecture</li>
+      <li>Conversion experience mapping</li>
+    </ul>
+    <!-- <a href="howtoworkwithme.html" class="explore-btn">Discover the Path →</a> -->
+  </div>
+</div>
+</section>
+</div>
+</section>
+<!-- Mid banner -->
+<section class="mid-cta-banner"  style="background: linear-gradient(45deg, #136666, #1B9C9C, #E8C26B); padding: 3rem 2rem; text-align: center; margin: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+  
+  <h2 style="font-size: 1.8rem; color: #FFFFFF; margin-bottom: 1rem;">💫 Let’s Bring Your Vision to Resonance 💫</h2>
+    <p class="text-lg text-white/80 max-w-3xl mx-auto mb-4">
+          Building AI-first experiences that personalize, recommend, and evolve with user intent? 
+          This space is for teams turning intelligence into impact.
+        </p>
+        <p style="font-size: 1.1rem; color: #444; max-width: 600px; margin: 0 auto 2rem;; font-weight: bold;">
+        Curious or exploring? Let's connect.</p>
+  <div class="cta-buttons" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+   <!-- <a href="#contact" onclick="loadContent('contact.html')" class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">📩 Start the Conversation</a> -->
+    <a class="inline-flex items-center bg-[#E8C26B] text-[#0F1020] hover:bg-[#F0D185] font-semibold"
+    href="#workwithme" onclick="loadContent('howtoworkwithme.html')" style="border-radius: 14px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(232,194,107,0.25)">
+          🚀 Let’s Take the Next Step—Together
+        </a>
+  </div>
+</section>
+</main>
+<div class="modal" id="contactModal" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);">
+<div style="background:#fff; margin:10% auto; padding:20px; width:300px; position:relative;">
+<span onclick="document.getElementById('contactModal').style.display='none'" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+<h2>Contact Us</h2>
+<form>
+<label for="name">Name:</label><br/>
+<input id="name" name="name" type="text"/><br/>
+<label for="email">Email:</label><br/>
+<input id="email" name="email" type="email"/><br/><br/>
+<input type="submit" value="Submit"/>
+</form>
+</div>
+</div>
+<script>
+document.querySelectorAll('.open-modal').forEach(btn => {
+  btn.onclick = () => {
+    document.getElementById('contactModal').style.display = 'block';
+  };
+});
+</script>
+<script>
+  function loadContent(path) {
+    const contentDiv = document.getElementById('main-content'); // this MUST match the ID above
+
+    // Optional: visual cue
+    contentDiv.innerHTML = `<div class="p-10 text-gray-500 text-center">Loading...</div>`;
+
+    fetch(path)
+      .then(response => response.text())
+      .then(html => {
+        contentDiv.innerHTML = html;
+        window.scrollTo({ top: contentDiv.offsetTop, behavior: 'smooth' });
+      })
+      .catch(err => {
+        contentDiv.innerHTML = "<p class='text-red-500'>Error loading content.</p>";
+        console.error(err);
+      });
+  }
+  // Optional auto-load based on hash
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === "#workwithme") {
+      loadContent('howtoworkwithme.html');
+    }
+    if (window.location.hash === "#contact") {
+      loadContent('contact.html');
+    }
+    if (window.location.hash === "#aboutme") {
+      loadContent('aboutme.html');
+    }
+  });
+</script>
+</body>
 </html>
